@@ -1,6 +1,6 @@
-# penelope
+<center>
+  <img width="200" height="300" src="misc/logo.jpeg">
 
-## Overview
-[logo]: https://github.com/tynr-io/penelope/raw/main/misc/logo.jpeg "Penelope Batch Translation"
+ <h1> penelope - a batch translation engine</h1>
+</center>
 
-Penelope is Tynr.io's batch translation API
