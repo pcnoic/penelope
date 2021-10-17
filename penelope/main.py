@@ -1,18 +1,17 @@
-######################################################
-# PENELOPE - Batch Translation Engine                #
-# Connects to a variety of database backends         #
-# fetcing data from collections/tables, performs     #
-# data normalization and  trains an RNN that allows  #
-# for better translation output.                     #
-#                                                    #
-#                                                    #
-# Supported input languages: gr                      #
-# Supported output languages: en                     #
-######################################################
+"""
+Peneloge - Batch Translation Engine
+License: MIT
+"""
+import fastapi as fa
+from apimodels import data
+
+# Controllers
+app = fa.FastAPI()
 
 
-def main():
-    print("running main")
+# Endpoints
+# All endpoints are unprotected. Please use a proxy if you want to add authentication.
 
-if __name__ == "__main__":
-    main()
+@app.post("/translate", status_code=200)
+async def translate(input_data: data.Data, response: fa.Response):
+    print("hello", data)
