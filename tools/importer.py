@@ -28,11 +28,12 @@ BASE_URL = 'http://www.manythings.org/anki/'
 def get_lang_dir(path='.'):
     git_repo = git.Repo(path, search_parent_directories=True)
     git_root = git_repo.git.rev_parse('--show-toplevel')
+    lang_dir = git_root + '/langdir/' 
+    
+    return lang_dir
 
-    return git_root
 
-
-LANG_DIR = get_lang_dir() + '/langdir/'
+LANG_DIR = get_lang_dir() 
 Path(LANG_DIR).mkdir(parents=True, exist_ok=True)
 
 class Importer(object):
